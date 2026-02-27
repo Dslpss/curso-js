@@ -20,7 +20,7 @@ function pesquisar() {
     resultado.textContent = "Digite apenas letras!";
     resultado.style.color = "red";
   } else if (encontrado) {
-    resultado.textContent = encontrado;
+    resultado.innerHTML = `<li class="list-group-item" >${encontrado}</li>`;
     resultado.style.color = "green";
   } else {
     resultado.textContent = "Nome não encontrado!";
@@ -28,11 +28,11 @@ function pesquisar() {
 }
 
 function carregarNomes() {
-  let resultado = document.getElementById("resultado");
-  resultado.textContent = "";
-  resultado.style.listStyle = "none";
-
+  let itensLista = "";
   for (i = 0; i < nomes.length; i++) {
-    resultado.innerHTML += `<li>${nomes[i]}</li>\n`;
+    let nome = nomes[i];
+    itensLista += ` <li class="list-group-item" >${nome}</li>`;
+    
   }
+  document.getElementById("resultado").innerHTML = itensLista;
 }
