@@ -1,4 +1,4 @@
-// Piçar 1 - Abstração
+// Pilar 1 - Abstração
 /**
  *  Modelo, Entidade, Identidade
  * Características e Ações
@@ -35,7 +35,7 @@ class Produto {
     this.preco = "45,90";
 
 
-    //eletronicos
+    //eletrônicos
     this.altura = "50cm"
     this.largura = "30cm"
   }
